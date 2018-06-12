@@ -1,0 +1,73 @@
+body, html {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+#container {
+    position: relative;
+}
+
+.map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0px;
+    padding: 0px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    transition: opacity .7s;
+    overflow: scroll;
+}   
+
+#map-wrapper {
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: transform .5s;
+    transform-origin: 0 0;
+    transform: scale(1);
+}
+
+#vector {
+    opacity: .3;
+    visibility: hidden;
+}
+
+#raster {
+    visibility: hidden;
+}
+
+#canvas {
+    /* display: none; */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: block;
+}
+
+.undisplay {
+    display: none;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+img {
+    /* height: 100vh; */
+    width: 100vw;
+    display: none;
+}
+
+canvas {
+    width: 100vw;
+    height: auto;
+    /* height: 100vh; */
+}
+
+/* https://stackoverflow.com/questions/17992543/how-do-i-drag-an-image-smoothly-around-the-screen-using-pure-javascript */
+/* https://fontawesome.com/cheatsheet */

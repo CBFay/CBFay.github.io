@@ -1,0 +1,38 @@
+<head>
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/tools.js"></script>
+    <script src="assets/static/fontawesome/fontawesome-all.min.js"></script>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body onload="buildMaps()">
+    <img src="/assets/maps/meridiani-planum/minified/vector40.png" alt="" class="base" id="vector-raw">
+    <img src="/assets/maps/meridiani-planum/minified/raster40.png" alt="" class="base" id="raster-raw">
+    
+    <canvas id="vector-legend" class="map"></canvas>
+    <canvas id="raster-mirror" class="map"></canvas>
+    <canvas id="vector-mirror" class="map"></canvas>
+
+    <div id="tools-wrapper">
+        <div id="description">
+            <div class="label">DESCRIPTION<i class="fas fa-square-full" id="color"></i></div>
+            <div id="description-text"></div>
+        </div>
+        
+        <div id="interpretation">
+            <div class="label">INTERPRETATION</div>
+            <div id="interpretation-text"></div>
+        </div>
+        
+    </div>
+
+    <div id="opacity-tool">
+        <div class="icon" onclick="toggle('vector-mirror')"><i class="fas fa-chess-board"></i></div>
+        <input id="opacity-slide" type="range" value="40" min="0" max="100" step="1" orient="vertical"
+        onchange="update_opacity(this.value)">
+    </div>
+
+    <script src="assets/js/legend.js"></script>
+</body>

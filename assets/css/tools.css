@@ -1,0 +1,61 @@
+#opacity-tool {
+    position: fixed;
+    bottom: 150px;
+    right: 50px;
+    width: 50px;
+    height: 200px;
+    background-color: #FFF;
+    box-shadow: 0px 0px 10px 2px #888;
+    border-radius: 4px;
+    padding: 0px;
+}
+
+#opacity-slide {
+    margin: 0px 0px 20px 0px;
+    width: 50px;
+    height: 130px;
+
+    /* vertical orientation */
+    -webkit-appearance: slider-vertical; /* Chrome */
+    writing-mode: bt-lr; /* Internet Explorer */
+}
+
+#zoom-tool {
+    position: fixed;
+    bottom: 25px;
+    right: 50px;
+    width: 50px;
+    height: 100px;
+    background-color: #FFF;
+    box-shadow: 0px 0px 10px 2px #888;
+    border-radius: 4px;
+    padding: 0px;
+}
+
+.icon {
+    color: #777;
+    font-size: 18px;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+}
+
+.icon:hover {
+    color: #444;
+}
+
+.icon {
+    padding: 0px 15px;
+}
+
+#legend-tool {
+    position: fixed;
+    top: 25px;
+    right: 50px;
+    width: 150px;
+    height: 150px;
+    background-color: #FFF;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, .5);
+    border-radius: 4px;
+    padding: 0px;
+}
