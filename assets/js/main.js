@@ -1,8 +1,12 @@
 function buildMaps() {
-    imageToCanvas('vector-raw', 'vector-legend');
+    imageToCanvas('vector-raw', 'vector-legend')
     imageToCanvas('vector-raw', 'vector-mirror');
     imageToCanvas('raster-raw', 'raster-mirror');
-    console.log('done!');
+    toggle('vector-legend');
+    toggle('vector-mirror');
+    toggle('raster-mirror');
+    toggle('loader-page');
+    document.body.style.overflow = "auto";
 }
 
 function imageToCanvas(fromID, toID) {

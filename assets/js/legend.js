@@ -1,3 +1,6 @@
+document.getElementById('tools-wrapper').style.visibility = 'visible';
+document.getElementById('opacity-tool').style.visibility = 'visible';
+
 function findPos(obj) {
     var curleft = 0, curtop = 0;
     if (obj.offsetParent) {

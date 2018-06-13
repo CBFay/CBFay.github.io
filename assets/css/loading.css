@@ -1,46 +1,70 @@
-#loadpage {
-    /* color */
-    background-color: #333;
-    z-index: 100;
-
-    /* Full height */
-    width: 100%;
-    height: 100%; 
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#spinner {
-    /* size */
-    width: 50px;
-    height: 50px;
-    border: 5px solid #DDD;
-    border-top-color: #498fff;
-    border-radius: 100%;
-
-    /* centering */
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+#spinner-wrap {
+    color: #FFF;
+    text-align: center;
     margin: auto;
-
-    /* animation */
-    animation: round 1s linear infinite;
+    top: 50%;
+    font-size: 32px;
+    position: relative;
 }
 
-@keyframes round {
-    from{transform: rotate(0deg)}
-    to{transform: rotate(360deg)}
+#load-message {
+    padding: 20px;
 }
 
-.hidden {
-    display: none;
-}
+.lds-ellipsis {
+    margin: -100px;
+    margin: auto;
+    position: relative;
+    width: 64px;
+    height: 64px;
+  }
+  .lds-ellipsis div {
+    position: absolute;
+    top: 27px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #fff;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+  .lds-ellipsis div:nth-child(1) {
+    left: 6px;
+    animation: lds-ellipsis1 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(2) {
+    left: 6px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(3) {
+    left: 26px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(4) {
+    left: 45px;
+    animation: lds-ellipsis3 0.6s infinite;
+  }
+  @keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(19px, 0);
+    }
+  }
+  

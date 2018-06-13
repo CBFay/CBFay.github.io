@@ -5,15 +5,17 @@
     <script src="assets/js/tools.js"></script>
     <script src="assets/static/fontawesome/fontawesome-all.min.js"></script>
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/loading.css">
 </head>
 
 <body onload="buildMaps()">
+
     <img src="/assets/maps/meridiani-planum/minified/vector40.png" alt="" class="base" id="vector-raw">
     <img src="/assets/maps/meridiani-planum/minified/raster40.png" alt="" class="base" id="raster-raw">
     
-    <canvas id="vector-legend" class="map"></canvas>
-    <canvas id="raster-mirror" class="map"></canvas>
-    <canvas id="vector-mirror" class="map"></canvas>
+    <canvas id="vector-legend" class="map hidden"></canvas>
+    <canvas id="raster-mirror" class="map hidden"></canvas>
+    <canvas id="vector-mirror" class="map hidden"></canvas>
 
     <div id="tools-wrapper">
         <div id="description">
@@ -25,14 +27,25 @@
             <div class="label">INTERPRETATION</div>
             <div id="interpretation-text"></div>
         </div>
-        
     </div>
 
+    <div class="icon" onclick="toggle('vector-mirror')"><i class="fas fa-chess-board" id="opacity-toggle"></i></div>
+
     <div id="opacity-tool">
-        <div class="icon" onclick="toggle('vector-mirror')"><i class="fas fa-chess-board"></i></div>
-        <input id="opacity-slide" type="range" value="40" min="0" max="100" step="1" orient="vertical"
+        <input id="opacity-slide" type="range" value="40" min="0" max="100" step="1"
         onchange="update_opacity(this.value)">
+
+    </div>
+
+    <div id="loader-page">
+        <div id="spinner-wrap">
+            <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+            <div id="load-message"></div>
+        </div>
     </div>
 
     <script src="assets/js/legend.js"></script>
 </body>
+
+<!-- https://loading.io/css/ -->
+<!-- <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> -->
