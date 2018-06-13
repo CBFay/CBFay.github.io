@@ -6,6 +6,11 @@ function toggle(elementID) {
     get(elementID).classList.toggle('hidden');
 }
 
+function disable_opacity() {
+    toggle('vector-mirror');
+    get('opacity-slide').disabled = ( ! get('opacity-slide').disabled );
+}
+
 function update_opacity(value) {
     get('vector-mirror').style.opacity = value * .01;
 }
